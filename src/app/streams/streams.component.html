@@ -1,0 +1,21 @@
+<div>
+    <section>
+      <div class="cards">
+        <div class="stream-card" *ngFor="let stream of streams">
+          <div class="card-header">
+            <p class="card-title">{{stream.user_name}}</p>
+          </div>
+          <img mat-card-image src={{stream.thumbnail_url}} alt={{stream.game_name}} class="card-image">
+          <div>
+            <p>
+              {{stream.game_name}}
+            </p>
+            <p>
+              {{stream.title}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  

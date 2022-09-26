@@ -1,0 +1,13 @@
+<div>
+    <section>
+      <div class="cards">
+        <div class="game-card" *ngFor="let game of games">
+          <div class="card-header">
+            <p class="card-title">{{game.name}}</p>
+          </div>
+          <img mat-card-image srcset={{game.box_art_url}} alt={{game.name}} class="card-image">
+        </div>
+      </div>
+    </section>
+  </div>
+  

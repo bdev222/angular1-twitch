@@ -1,0 +1,24 @@
+<div>
+  <section class="search-input">
+    <mat-form-field appearance="legacy">
+      <mat-label>Search</mat-label>
+      <input matInput placeholder="Search Channel..." [(ngModel)]="query" (ngModelChange)="queryChange()">
+    </mat-form-field>
+  </section>
+  <section>
+    <div class="cards">
+      <div class="channel-card" *ngFor="let channel of channels">
+        <div class="card-header">
+          <p class="card-title">{{channel.display_name}}</p>
+        </div>
+        <img src={{channel.thumbnail_url}} alt={{channel.game_name}} class="card-image">
+        <div>
+          <p>
+            {{channel.game_name}}
+          </p>
+          <p>{{channel.title}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
